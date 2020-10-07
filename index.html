@@ -137,7 +137,7 @@ body {
           //addLine("<p>> Type help to see a list of commands</p>");
           addLine("<p>Welcome to my portfolio !</p>");
           addLine("<p>Oh it's "+name+" ! How have you been ?</p>");
-          addLine("<p>You can enter by typing '/enter'</p>")
+          addLine("<p>You can enter by typing 'Enter'</p>")
 
 
         }else{
@@ -171,11 +171,11 @@ body {
                     Cookies.set("nameCookie",text);
                     name = Cookies.get("nameCookie");
                     $("#username").html(name);
-                    return "</br>Nice to meet you "+name+" !</br>You can enter by typing '/Enter'.";
+                    return "</br>Nice to meet you "+name+" !</br>You can enter by typing 'Enter'.";
                 }
 
             }
-            else if(text=="/enter"||text=="/Enter")
+            else if(text=="enter"||text=="Enter")
             {
 
                 var myVar = setTimeout(showPage, 500);
