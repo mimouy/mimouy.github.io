@@ -93,10 +93,11 @@ body {
 
         var name = Cookies.get("nameCookie");
         if(name!=undefined&&name!=null&&name!=""){// Si le nom est déjà renseigné
-
-            addLine("<p>> Type help to see a list of commands</p>");
-            addLine("<p>Welcome to my portfolio !</p>");
-            addLine("<p>Oh it's "+name+" ! How have you been ?</p>");
+          
+          $("#username").html(name);
+          addLine("<p>> Type help to see a list of commands</p>");
+          addLine("<p>Welcome to my portfolio !</p>");
+          addLine("<p>Oh it's "+name+" ! How have you been ?</p>");
 
 
         }else{
