@@ -2,7 +2,8 @@
 <html>
 <body>
 
-<button id="getcookie">Get cookie</button>
+  <button id="getcookie">Get cookie</button>
+  <button id="suppcookie">Remove cookie</button>
 
 <div id="dialog">
 
@@ -52,6 +53,9 @@ function setText(text){
 
 $("#getcookie").click(function(){
   alert(Cookies.get('nameCookie',name));
+})
+$("#suppcookie").click(function(){
+  alert(Cookies.get('nameCookie',""));
 })
 
 });
