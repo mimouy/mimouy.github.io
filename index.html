@@ -95,9 +95,10 @@ body {
         if(name!=undefined&&name!=null&&name!=""){// Si le nom est déjà renseigné
           
           $("#username").html(name);
-          addLine("<p>> Type help to see a list of commands</p>");
+          //addLine("<p>> Type help to see a list of commands</p>");
           addLine("<p>Welcome to my portfolio !</p>");
           addLine("<p>Oh it's "+name+" ! How have you been ?</p>");
+          addLine("<p>You can enter by typing '/enter'</p>")
 
 
         }else{
@@ -137,6 +138,7 @@ body {
             else if(text=="/enter"||text=="/Enter")
             {
                 return ""; //enter the portfolio
+                alert("Enter");
             }
             else{
                 return "</br>This function is not recognized.";
