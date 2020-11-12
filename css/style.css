@@ -1291,13 +1291,18 @@ body {
   .console {
 
   font-family: 'Fira Mono';
-  width: 700px;
-  height: 450px;
+  width: 75%;
+  height: 75%;
   box-sizing: border-box;
   margin: auto;
-  margin-top: 10%;
-  
+  margin-top: 50px;
   font-size: 17px;
+  }
+  .consoleinner{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: inset 0 0 1em black, 0 0 2em black;
   }
   
   .console header {
@@ -1319,6 +1324,7 @@ body {
   overflow-y: scroll;
   background-color: #000;
   color: #63de00;
+  
   }
   
   .console .consolebody p {
@@ -1368,7 +1374,9 @@ body {
   display: none;
   text-align: center;
   }
-  
+  .homeTitle{
+    color: white;
+  }
   .left20{
     margin-left: 20px;
   }
@@ -1407,6 +1415,10 @@ body {
   .description{
     margin-top: 50px;
   }
+  .white{
+    color: white;
+  }
+
 
   @media only screen and (max-width: 800px) { 
     .half{
@@ -1419,4 +1431,13 @@ body {
       width: 100%;
     }
 
+
+
+    .BG{
+      background-color:#343a40;
+    }
+    .console{
+      width: 95%;
+    }
+    
   } 
