@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
   <title>Starpig - Unity C#</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="google" content="notranslate">
+
 
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
@@ -82,6 +84,9 @@
               <div class="d-none d-xl-inline-block">
                 <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
                   <li>
+                    <a title="Change langage" onclick="switchlang(event)" href="#" class="pl-0 pr-3"><span class="icon-language"></span></a>
+                  </li>
+                  <li>
                     <a href="https://github.com/mimolol" class="pl-0 pr-3"><span class="icon-github"></span></a>
                   </li>
                   <li>
@@ -111,7 +116,7 @@
   
             <div class="col-md-7">
               <div class="row mb-5">
-                <div class="col-12 ">
+                <div class="col-12 eng">
                   <h2 class="site-section-heading text-center">Starpig <img src="/images/starpig/PorcoSleep.jpg" class="fullW" >
                   </h2>
                 </br>
@@ -133,6 +138,31 @@
               </iframe>
               <p>If you want to watch :)</p>
                 </div>
+
+                <div class="col-12 fr">
+                  <h2 class="site-section-heading text-center">Starpig <img src="/images/starpig/PorcoSleep.jpg" class="fullW" >
+                  </h2>
+                </br>
+                  <h3>J'ai réalisé ce projet pour mon cours de Game Dev.</h3>
+                 </br>
+                  <h5>C'était le premier vrai jeu que j'ai terminé, même s'il est petit.</h5>
+               
+                  <h5>C'est une "Starfox like" space/rail shooter qui a Porco Rosso comme thème.
+                  </h5>
+                </br>
+                  <h5>Il m'a pris un peu moins d'un mois à réaliser.
+                  </h5>
+                </br>
+                <h5>J'ai utilisé <b>Unity</b> et c'était la première fois que je l'utilisais pour un jeu, je suis bien plus habitué à Unreal Engine 4.
+                </h5>
+              </br>
+              <h1 class="text-center eng">A gameplay ideo</h1>
+              <h1 class="text-center fr">Vidéo du Gameplay</h1>
+              <iframe class="fullW text-center" src="https://www.youtube.com/embed/5m3VZ9JgjnQ">
+              </iframe>
+              <p class="eng">If you want to watch :)</p>
+              <p class="fr">Si vous voulez regarder :)</p>
+                </div>
               </div>
             </div>
   
@@ -142,26 +172,41 @@
   
         <div class="row justify-content-center description" >
           <div  class="col-md-9">
-  <!--class="row"  4 par ligne--> 
-  <!--id="lightgallery"  Click to open gallery-->
-            <h1 class="text-center">A brief presentation</h1>
-          </br>
-          <h3 class="left20;">Concept</h3>
-            <div class="mparag" data-aos="fade">
+           
+            <h1 class="text-center eng">A brief presentation</h1>
+            <h1 class="text-center fr">Présentation</h1>
+            </br>
+          <h3 class="left20 eng">Concept</h3>
+          <h3 class="left20 fr">Concepte</h3>
+
+            <div class="mparag eng" data-aos="fade">
               <img src="images/starpig/screen1.PNG" class="bigImg">
               <p>
                 So like I said it's a Starfox like, so the objective is to <b>shoot</b> enemies while the camera is moving, and try to catch as many <b>coins</b> as we can.
               </p>
               <p>And to do so, we have two <b>weapons</b>, an infinite <b>machinegun</b> and <b>rockets</b>.</p>
               <br>
-              <p>The player looses <b>health points</b> is he gets shot and if he has shield he looses <b style="color: blue;">shield points</b>.</br>
+              <p>The player looses <b>health points</b> as he gets shot and if he has shield he looses <b style="color: blue;">shield points</b>.</br>
               He looses when he looses all his HP's.</p>
             </div>
+            <div class="mparag fr" data-aos="fade">
+              <img src="images/starpig/screen1.PNG" class="bigImg">
+              <p>
+                Comme je l'ai dit c'est un "Strafox like", l'objectif est de <b>tirer</b> sur les ennemis pendant que la camera va en avant, et récupérer autant de <b>pièces</b> que l'on peut.
+              </p>
+              <p>Pour ce faire, Nous avons deux <b>armes</b>, une <b>mitrailleuse</b> infinie et des <b>roquettes</b>.</p>
+              <br>
+              <p>Le joueur perd <b>points de vie</b> quand il se fait tirer de dessus et s'il a des <b style="color: blue;">points de bouclier</b> il les perd en priorité.</br>
+              Il perd la partie quand il n'a plus d'<b>HP</b>s.</p>
+            </div>
   
-            <h3 class="left20;">Health</h3>
+            <h3 class="left20 eng">Health</h3>
+            <h3 class="left20 fr">Vie</h3>
             <div class="parag">
-            <p>A brief feature I added to the health bar is the picture of Marco (player's character).</br>
+            <p class="eng">A brief feature I added to the health bar is the picture of Marco (player's character).</br>
               This image changes depending on player's HP's (Yeah like in 1994's Aladdin).</p>
+              <p class="fr">Une feature que j'ai rajouté est la photo de Marco (le joueur).</br>
+                Cette image change selon les <b>HP</b>s du joueur (Oui comme Aladdin de 1994).</p>
               <div class="flexRow" data-aos="fade">
                 <div>
                   <img src="/images/starpig/IconHappyMarco.png" class="fullW">
@@ -173,7 +218,7 @@
                 </div>
                 <div>
                   <img src="/images/starpig/IconHurtMarco.png" class="fullW">
-                  <h5 class="text-center"  >HP<30%</h5>
+                  <h5 class="text-center"  >HP < 30%</h5>
                 </div>
   
               </div>
@@ -184,17 +229,23 @@
   
             <h3 class="left20;">Bonus</h3>
             <div class="parag" data-aos="fade">
-              <p>
+              <p class="eng">
                 The player can get <b>bonuses</b> by taking them directly, like the <b style="color: blue; font-size: larger;">X2</b> bonus that gives him a double machinegun for a few seconds, or
                  the <b>heart</b> that gives him HP's.
+              </p>
+              <p class="fr">
+                Le joueur peut récupérer des <b>bonus</b> en les touchant, comme le bonus <b style="color: blue; font-size: larger;">X2</b> qui lui donne une double mitrailleuse pendant quelques secondes, ou
+                 le <b>coeur</b> qui lui rend des HP.
               </p>
               <img src="images/starpig/heart.PNG" class="fullW">
             </div>
   
-            <h3 class="left20;">Bonus box</h3>
+            <h3 class="left20 eng">Bonus box</h3>
+            <h3 class="left20 eng">Boites mystère</h3>
+
             <div class="flexRow parag" data-aos="fade">
               <img src="images/starpig/box.PNG" class="w30">
-              <p>
+              <p class="eng pad10">
                 He can also have a random bonus by detroying a <b>bonus box</b>.
                 Those boxes can contain :</br></br> 
                 - Health points.</br>
@@ -202,16 +253,25 @@
                 - Double machinegun.</br>
                 - Rockets.</br>
                 - Coins.</br>
-    
+              </p>
+              <p class="fr pad10">
+                Il peut aussi récupérer des bonu en détruisant les <b>boites mystère</b>.
+                Ces boites peuvent contenir :</br></br> 
+                - Des points de vie (HP).</br>
+                - Des points de bouclier (SP).</br>
+                - Double mitrailleuse (X2).</br>
+                - Des roquettes.</br>
+                - Des pièces.</br>
               </p>
   
   
             </div>
   
   
-          <h3 class="left20;">Enemies</h3>
+          <h3 class="left20 eng">Enemies</h3>
+          <h3 class="left20 fr">Ennemis</h3>
   
-            <div class="parag" data-aos="fade">
+            <div class="parag eng" data-aos="fade">
   
             </br>
               <p>There are different kinds of enemies, but before that let's see how they spawn.</p>
@@ -244,7 +304,7 @@
             </div>
              </div>
   
-             <h4 class="left5"">Movement</h4>
+             <h4 class="left5">Movement</h4>
              <div class="parag">
                <p>Enemies have different <b>behaviors.</b></p>
                <li>Static : Doesn't move at all.</li>
@@ -259,7 +319,7 @@
              <h5>Following plane</h5>
              <div class="flexRow mparag" >
              <img src="/images/starpig/follow.PNG" class="w30">
-             <p>This enemy <b>follows</b> the player on the <b>X</b> and <b>Y</b> axes and shoots <b>straight</b>.</br><br>
+             <p class="pad10">This enemy <b>follows</b> the player on the <b>X</b> and <b>Y</b> axes and shoots <b>straight</b>.</br><br>
               At level 1 and in easy mode he has <b>80</b> HP and shoots <b>6</b> times before reloading.
             </p>
              </div>
@@ -267,7 +327,7 @@
              <h5>Right to Left plane</h5>
              <div  class="flexRow mparag" >
              <img src="/images/starpig/gd.PNG" class="w30">
-             <p>This enemy goes <b>infinitely</b> from <b>right</b> to <b>left</b> and vice versa. He shoots <b>straight</b> </br>
+             <p class="pad10">This enemy goes <b>infinitely</b> from <b>right</b> to <b>left</b> and vice versa. He shoots <b>straight</b> </br>
               at level 1 but aims the player at level 2.</br><br>
               At level 1 and in easy mode he has <b>80</b> HP and shoots <b>8</b> times before reloading.
             </p>
@@ -276,7 +336,7 @@
              <h5>Static plane</h5>
              <div  class="flexRow mparag" >
              <img src="/images/starpig/static.PNG" class="w30">
-             <p>This enemy <b>doesn't move</b> from his place and shoots <b>at the player</b>.</br><br>
+             <p class="pad10">This enemy <b>doesn't move</b> from his place and shoots <b>at the player</b>.</br><br>
               At level 1 and in easy mode he has <b>80</b> HP and shoots <b>5</b> times before reloading.
             </p>
              </div>
@@ -284,9 +344,90 @@
              <h5>Burst plane</h5>
              <div  class="flexRow mparag" >
              <img src="/images/starpig/rafale.PNG" class="w30">
-             <p>This enemy <b>follows</b> the player on the <b>X</b> and <b>Y</b> axes and <b>stands</b> on his place while <b>reloading</b>.</br>
+             <p class="pad10">This enemy <b>follows</b> the player on the <b>X</b> and <b>Y</b> axes and <b>stands</b> on his place while <b>reloading</b>.</br>
               He shoots only when he's moving and shoots <b>straight</b>.</br><br>
               At level 1 and in easy mode he has <b>100</b> HP and shoots <b>5</b> times before reloading.
+            </p>
+             </div>
+  
+            </div>
+
+            <div class="parag fr" data-aos="fade">
+  
+            </br>
+              <p>Il y'a différents types d'ennemis mais avant ça regardons comment ils apparaissent (spawn).</p>
+              <h4 class="left5">Apparition (spawn)</h4>
+              <div class="flexRow">
+                <p class="pad10 mar10">Les ennemis apparaissent dans une grille en 3x3 quand le joueur entre dans un trigger.
+                  <img src="/images/starpig/codespawn.PNG" class="fullW">
+                  <img src="/images/starpig/spawn1.PNG" class="fullW">
+                </p>
+                <img src="/images/starpig/grid.PNG" class="half">
+              </div>
+             <p>
+              J'ai utilisé les <b>enum</b> et <b>Dictionnary</b> de C# pour créer ça afin de simplifier le spawn.</br>
+              Ensuite j'ai créé les triggers qui peuvent spawn autant d'ennemis qu'on le veut, en choisissant le type et l'emplacement.
+             </p>
+  
+             <h4 class="left5">Tir</h4>
+             <p>Le système de tir est assez simple, il n'utilise pas de <b>physique</b>, seulement du <b>code</b>.</br>
+                Les ennemis (comme le jour) tirent des projectiles qui endommagent l'adversaire (et disparaissent) au contact.</p>
+             <p>Les <b>dégats</b> dépendent du type d'ennemi et de la <b>difficulté</b> choisie par le joueur.</br>
+                Les ennemis peuvent tirer <b>droit</b> ou viser le <b>joueur</b>.</p>
+             <div class="parag">
+              <div>
+                <p>Tirs droits :</p>
+              <img src="/images/starpig/forward.PNG" class="fullW" >
+            </div>
+              <div>
+                <p>Tir de visée :</p>
+              <img src="/images/starpig/aim.PNG" class="fullW">
+            </div>
+             </div>
+  
+             <h4 class="left5">Mouvement</h4>
+             <div class="parag">
+               <p>Les ennemis ont plusieurs <b>comportements.</b></p>
+               <li>Statique : ne bouge pas du tout (sur les axes X et Y).</li>
+               <li>Droite Gauche : Va de gauche à droite (comme un essuie glace).</li>
+               <li>Suiveur : Suit le joueur sur les axes X et Y.</li>
+               <li>Rafale : Suit le joueur quand il tire et s'arrête quand il recharge.</li>
+  
+             </div>
+             <h4 class="left5">Types d'ennemis</h4>
+  
+  
+             <h5>Avion suiveur</h5>
+             <div class="flexRow mparag" >
+             <img src="/images/starpig/follow.PNG" class="w30">
+             <p class="pad10">Cet ennemi <b>suit</b> le joueur sur les axes <b>X</b> et <b>Y</b> et tire <b>droit</b>.</br><br>
+              Au niveau 1 en mode facile il a <b>80</b> HP et tire <b>6</b> fois avant de recharger.
+            </p>
+             </div>
+  
+             <h5>Gauche droite</h5>
+             <div  class="flexRow mparag" >
+             <img src="/images/starpig/gd.PNG" class="w30">
+             <p class="pad10">Cet ennemi passe <b>infiniment</b> de <b>droite</b> à <b>gauche</b> et vice versa. Il tire <b>droit</b> </br>
+              au niveau 1 mais vise le joueur au niveau 2.</br><br>
+              Au niveau 1 et en mode facile, il a <b>80</b> HP et tire <b>8</b> fois avant de recharger.
+            </p>
+             </div>
+  
+             <h5>Avions statiques</h5>
+             <div  class="flexRow mparag" >
+             <img src="/images/starpig/static.PNG" class="w30">
+             <p class="pad10">Cet ennemi est <b>immobile</b> et tire en visant <b>le joueur</b>.</br><br>
+              Au niveau 1 et en mode facile, il a <b>80</b> HP et tire <b>5</b> fois avant de recharger.
+            </p>
+             </div>
+  
+             <h5>Rafale</h5>
+             <div  class="flexRow mparag" >
+             <img src="/images/starpig/rafale.PNG" class="w30">
+             <p class="pad10">Cet ennemi <b>suit</b> le joueur sur les axes <b>X</b> et <b>Y</b> et reste <b> immobile</b> pendant qu'il <b>recharge</b>.</br>
+              Il ne tire que lorsqu'il est en mouvement et tire <b>droit</b>.</br><br>
+              Au niveau 1 et en mode facile, il a <b>100</b> HP et tire <b>5</b> fois avant de recharger.
             </p>
              </div>
   
@@ -305,7 +446,7 @@
       <div class="footer">
         <div class="container-fluid text-center">
           <p>
-            Copyright <script>document.write(new Date().getFullYear());</script> All rights reserved | Mimolol
+            Copyright <script>document.write(new Date().getFullYear());</script> All rights reserved | Mimolol - Mohamed Bouyakhlef
           </p>
         </div>
       </div>
@@ -326,7 +467,7 @@
 
 
 
-
+  <script src="/js/langagesetting.js"></script>
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>

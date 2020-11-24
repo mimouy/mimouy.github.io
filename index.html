@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
   <title>Mimolol - Portfolio (WIP)</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="google" content="notranslate">
+
 
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
@@ -133,6 +135,9 @@
             <div class="d-none d-xl-inline-block">
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
                 <li>
+                  <a title="Change langage" onclick="switchlang(event)" href="#" class="pl-0 pr-3"><span class="icon-language"></span></a>
+                </li>
+                <li>
                   <a href="https://github.com/mimolol" class="pl-0 pr-3"><span class="icon-github"></span></a>
                 </li>
                 <li>
@@ -157,7 +162,8 @@
 
 
         <div class="col-12 ">
-          <h2 class="site-section-heading text-center">My projects</h2>
+          <h2 class="site-section-heading text-center eng">My projects</h2>
+          <h2 class="site-section-heading text-center fr">Mes projets</h2>
         </div>
 
     <div class="container-fluid" data-aos="fade" data-aos-delay="500">
@@ -167,8 +173,9 @@
           <div class="image-wrap-2">
             <div class="image-info">
               <h2 class="mb-3">Time Manager</h2>
-              <h5 class="white">Time managing app made with Elixir/Vue.js</h5>
-              <a href="timemanager" class="btn btn-outline-white py-2 px-4">More Infos</a></div>
+              <h5 class="white eng">Time managing app made with Elixir/Vue.js</h5>
+              <h5 class="white fr">Appli de Time Management en Elixir/Vue.js</h5>
+              <a href="timemanager" class="btn btn-outline-white py-2 px-4"><span class="eng"><span class="eng">More Infos</span><span class="fr">Voir plus</span></span><span class="fr">Voir plus</span></a></div>
             <img src="images/timemanagertumb.PNG" alt="Image" class="img-fluid">
           </div>
         </div>
@@ -180,8 +187,9 @@
           <div class="image-wrap-2">
             <div class="image-info">
               <h2 class="mb-3">WeatherApp</h2>
-              <h5 class="white">A Node.js weather web app</h5>
-              <a href="weather" class="btn btn-outline-white py-2 px-4">More Infos</a></div>
+              <h5 class="white eng">A Node.js weather web app</h5>
+              <h5 class="white fr">Appli de web météo en Node.js</h5>
+              <a href="weather" class="btn btn-outline-white py-2 px-4"><span class="eng">More Infos</span><span class="fr">Voir plus</span></a></div>
             <img src="images/weather.jpg" alt="Image" class="img-fluid">
           </div>
         </div>
@@ -190,8 +198,9 @@
           <div class="image-wrap-2">
             <div class="image-info">
               <h2 class="mb-3">Music Player</h2>
-              <h5 class="white">A C# ASP.NET web music player</h5>
-              <a href="musicplayer" class="btn btn-outline-white py-2 px-4">More Infos</a></div>
+              <h5 class="white eng">A C# ASP.NET web music player</h5>
+              <h5 class="white fr">Appli web de streaming musical en C# ASP.NET</h5>
+              <a href="musicplayer" class="btn btn-outline-white py-2 px-4"><span class="eng">More Infos</span><span class="fr">Voir plus</span></a></div>
             <img src="images/suplayertumb.png" alt="Image" class="img-fluid">
           </div>
         </div>
@@ -200,8 +209,9 @@
           <div class="image-wrap-2">
             <div class="image-info">
               <h2 class="mb-3">Starpig</h2>
-              <h5 class="white">Video Game made on Unity</h5>
-              <a href="starpig" class="btn btn-outline-white py-2 px-4">More Infos</a></div>
+              <h5 class="white eng">Video Game made on Unity</h5>
+              <h5 class="white fr">Jeu vidéo réalisé sur Unity</h5>
+              <a href="starpig" class="btn btn-outline-white py-2 px-4"><span class="eng">More Infos</span><span class="fr">Voir plus</span></a></div>
             <img src="images/tumbsp.png" alt="Image" class="img-fluid">
           </div>
         </div>
@@ -210,8 +220,9 @@
           <div class="image-wrap-2">
             <div class="image-info">
               <h2 class="mb-3">Moocs</h2>
-              <h5 class="white">PHP booking Web application</h5>
-              <a href="mooc" class="btn btn-outline-white py-2 px-4">More Infos</a>
+              <h5 class="white eng">PHP booking Web application</h5>
+              <h5 class="white fr">Appli web de réservation en PHP</h5>
+              <a href="mooc" class="btn btn-outline-white py-2 px-4"><span class="eng">More Infos</span><span class="fr">Voir plus</span></a>
             </div>
             <img src="images//moocs/moocsTumb.png" alt="Image" class="img-fluid">
           </div>
@@ -222,7 +233,7 @@
           <div class="image-wrap-2">
             <div class="image-info">
               <h2 class="mb-3"></h2>
-              <!--<a href="#" class="btn btn-outline-white py-2 px-4">More Infos</a>-->
+              <!--<a href="#" class="btn btn-outline-white py-2 px-4"><span class="eng">More Infos</span><span class="fr">Voir plus</span></a>-->
             </div>
             <img src="images/WIP.webp" alt="Image" class="img-fluid">
           </div>
@@ -237,7 +248,7 @@
     <div class="footer">
       <div class="container-fluid text-center">
         <p>
-          Copyright <script>document.write(new Date().getFullYear());</script> All rights reserved | Mimolol
+          Copyright <script>document.write(new Date().getFullYear());</script> All rights reserved | Mimolol - Mohamed Bouyakhlef
         </p>
       </div>
     </div>
@@ -247,20 +258,11 @@
     
     
     
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/js.cookie.min.js"></script>
     
-      <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-    
-     <script src="js/consoleportal.js"></script>
-
-
-
-
-
-
-
-
-
+  <script src="js/consoleportal.js"></script>
+<script src="js/langagesetting.js"></script>
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>

@@ -1418,6 +1418,102 @@ body {
   .white{
     color: white;
   }
+  .none {
+    display: none !important;
+  }
+  #waveform{
+    border:white solid 1px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 2px;
+    background-color: black;
+  }
+  .musicbtn:hover{
+    color: white;
+    cursor: pointer;
+  }
+
+  .fromright{
+  animation-name: example;
+  animation-duration: 4s;
+  white-space: nowrap;
+  color: white;
+  font-size: smaller;
+  }
+
+
+  @keyframes example {
+    from {margin-left: 100%;}
+    to {margin-left: 0;}
+  }
+
+
+
+
+#volume {
+  position: absolute;
+  height: 5px;
+  width: 200px;
+  background: #555;
+  border-radius: 15px;
+  margin-left:20px;
+  margin-top: 8px;
+}
+#volume .ui-slider-range-min {
+  height: 5px;
+  width: 200px;
+  position: absolute;
+  background: red;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+#volume .ui-slider-handle {
+  width: 15px;
+  height: 15px;
+  border-radius: 20px;
+  background: #FFF;
+  position: absolute;
+  cursor: pointer;
+  outline: none;
+}
+.audioheader{
+  display: flex;
+  flex-direction: row;
+}
+.audioheader i {
+  margin-top: 4px;
+  margin-right: 20px;
+
+}
+.audioheader #playpause{
+  width: 20px;
+}
+.audioheader .vol{
+  width: 100%;
+}
+
+.audioplayer{
+  position: fixed;
+  width: 250px;
+  height: 200px;
+  bottom: 0px;
+  right: 0px;
+  overflow: hidden;
+}
+.showplayerbtn{
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 0px;
+  right: 0px;
+}
+.showplayerbtn i {
+  font-size: 60px;
+  position: fixed;
+}
+
+
 
 
   @media only screen and (max-width: 800px) { 
