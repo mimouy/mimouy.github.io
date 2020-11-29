@@ -1501,7 +1501,6 @@ body {
   bottom: 0px;
   right: 0px;
   overflow: hidden;
-  margin-right: 25px;
 }
 .showplayerbtn{
   position: fixed;
@@ -1529,9 +1528,7 @@ body {
       width: 100%;
     }
 
-    .audioplayer{
-      margin-right: 10px
-    }
+
 
     .BG{
       background-color:#343a40;

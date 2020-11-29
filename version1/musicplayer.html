@@ -67,13 +67,13 @@
           <div class="row align-items-center">
   
             <div class="col-6 col-xl-2" data-aos="fade-down">
-              <h1 class="mb-0"><a href="home" class="text-white h2 mb-0">Mimolol</a></h1>
+              <h1 class="mb-0"><a href="/" class="text-white h2 mb-0">Mimolol</a></h1>
             </div>
             <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
               <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
   
                 <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                  <li><a href="home">Home</a></li>
+                  <li><a href="/">Home</a></li>
                   <li><a href="contact">Contact</a></li>
                 </ul>
               </nav>
@@ -87,13 +87,13 @@
                     <a title="Change langage" onclick="switchlang(event)" href="#" class="pl-0 pr-3"><span class="icon-language js-menu-close"></span></a>
                   </li>
                   <li>
-                    <a target="_blank" href="https://github.com/mimolol" class="pl-0 pr-3"><span class="icon-github"></span></a>
+                    <a href="https://github.com/mimolol" class="pl-0 pr-3"><span class="icon-github"></span></a>
                   </li>
                   <li>
-                    <a target="_blank" href="https://www.linkedin.com/in/mohamed-m-1b7b981a9/" class="pl-0 pr-3"><span class="icon-linkedin"></span></a>
+                    <a href="https://www.linkedin.com/in/mohamed-m-1b7b981a9/" class="pl-0 pr-3"><span class="icon-linkedin"></span></a>
                   </li>
                   <li>
-                    <a target="_blank" href="mailto:bouyakhlefmohamed@gmail.com" class="pl-0 pr-3"><span class="icon-mail_outline"></span></a>
+                    <a href="mailto:bouyakhlefmohamed@gmail.com" class="pl-0 pr-3"><span class="icon-mail_outline"></span></a>
                   </li>
                 </ul>
               </div>
@@ -331,14 +331,33 @@
 
 
   </div>
-
+  
+  
+           
+  
           </div>
         </div>
       </div>
+      <script src="https://unpkg.com/wavesurfer.js"></script>
       <script src="/js/cookieSetting.js"></script>
 
 
+      <div id="audioplayer" class="audioplayer">
 
+        <div class="audioheader">
+          <i onclick="hideplayer()" class="icon-close closeplayerbtn musicbtn"></i>
+          <div class="fromright">Conquest Of Paradise - Vangelis</div>
+        </div>
+        <div id="waveform"></div>
+        <div class="audioheader">
+          <div id="playpause" onclick="playM()"><span class="icon-play_arrow musicbtn"></span></div>
+          <div class="vol"><div id="volume"></div></div>
+        </div>
+      </div>
+      <div class="showplayerbtn" id="showplayer">
+        <i onclick="showplayer()"  class="icon-music_note musicbtn"></i>        
+
+      </div>
       
       <div class="footer">
         <div class="container-fluid text-center">
@@ -349,7 +368,62 @@
         </div>
       </div>
   
- 
+      <script>
+        let loaded = false;
+        var wavesurfer = WaveSurfer.create({
+          container: '#waveform',
+          waveColor: 'red',
+          progressColor: 'black',
+          cursorColor: "white",
+        });
+        wavesurfer.load('audio/vangelis-conquest-of-paradise.mp3');
+        let volume = getCookiebyName("volume");
+        if (!volume) {
+          createNewCookie("volume",1,200);
+          volume = getCookiebyName("volume");
+        }
+        setVolume(volume);
+
+          wavesurfer.on('seek', function () {
+          wavesurfer.play();
+          document.getElementById("playpause").innerHTML = "<span class='icon-pause musicbtn'></span>";
+        });
+        wavesurfer.on('finish', function () {
+          document.getElementById("playpause").innerHTML = "<span class='icon-replay musicbtn'></span>";
+        });
+
+        
+        function playM(){
+          if(!wavesurfer.isPlaying()){
+            wavesurfer.play();    
+            document.getElementById("playpause").innerHTML = "<span class='icon-pause musicbtn'></span>";
+          }else{
+            wavesurfer.pause();
+            document.getElementById("playpause").innerHTML = "<span class='icon-play_arrow musicbtn'></span>";
+          }
+        }
+
+        function setVolume(val){
+          wavesurfer.setVolume(val);
+          createNewCookie("volume",val,200);
+        }
+
+        function showplayer(){
+          if (!loaded) {
+            wavesurfer.load('audio/vangelis-conquest-of-paradise.mp3');
+            loaded = true;
+          }
+          //document.getElementById("showplayer").classList.add('none');
+          hidebyId("showplayer");
+          hidebyId("audioplayer");
+          showbyId("audioplayer");
+        }
+        function hideplayer(){
+          showbyId("showplayer");
+          hidebyId("audioplayer");
+        }
+
+      </script>
   
       
       
@@ -375,6 +449,32 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
+  <script>
+    $("#volume").slider({
+  min: 0,
+  max: 100,
+  value: volume*100,
+  range: "min",
+  slide: function(event, ui) {
+    volume = ui.value / 100;
+    setVolume(ui.value / 100);
+  }
+  });
+$('#audioplayer').hide();
+function hidebyId(id) {
+  if (document.getElementById) {
+    var divid = document.getElementById(id);
+    $(divid).fadeOut("slow");
+  }
+  return false;
+}
+function showbyId(id) {
+    var divid = document.getElementById(id);
+    $(divid).fadeIn("slow");
+  return true;
+}
+
+</script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
