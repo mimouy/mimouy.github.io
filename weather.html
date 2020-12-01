@@ -34,6 +34,47 @@
 </head>
 <body id="body">
 
+ 
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+
+  <script src="js/iframeset-jquery.js"></script>
+
+<div id="notframe">
+  <iframe height="100%" width="100%" frameBorder="0" id="iframeview" src="/weather" title="PORTFOLIO"></iframe>
+    
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+  <script src="js/cookieSetting.js"></script>
+
+
+  <div id="audioplayer" class="audioplayer">
+
+    <div class="audioheader">
+      <i onclick="hideplayer()" class="icon-close closeplayerbtn musicbtn"></i>
+      <div class="fromright">Conquest Of Paradise - Vangelis</div>
+    </div>
+    <div id="waveform"></div>
+    <div class="audioheader">
+      <div id="playpause" onclick="playM()"><span class="icon-play_arrow musicbtn"></span></div>
+      <div class="vol"><div id="volume"></div></div>
+    </div>
+  </div>
+  <div class="showplayerbtn" id="showplayer">
+    <i onclick="showplayer()"  class="icon-music_note musicbtn"></i>        
+
+  </div>
+
+
+<script src="js/audioplayer.js"></script>
+<script src="js/audioplayer-jquery.js"></script>
+
+
+
+</div>
+
+<div id="inframe">
+
 
 
 
@@ -66,13 +107,13 @@
           <div class="row align-items-center">
   
             <div class="col-6 col-xl-2" data-aos="fade-down">
-              <h1 class="mb-0"><a href="home" class="text-white h2 mb-0">Mimolol</a></h1>
+              <h1 class="mb-0"><a href="/" class="text-white h2 mb-0">Mimolol</a></h1>
             </div>
             <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
               <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
   
                 <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                  <li><a href="home">Home</a></li>
+                  <li><a href="/">Home</a></li>
                   <li><a href="contact">Contact</a></li>
                 </ul>
               </nav>
@@ -359,6 +400,6 @@
 
   <script src="js/main.js"></script>
   
-
+</div>
 </body>
 </html>
