@@ -9,7 +9,7 @@
             if(Cookies.get("inside")){
               showPage();
             }else{
-              $("#body").addClass("portail");
+              $("body").addClass("portail");
               $("#loader").show();
             }
             
@@ -161,7 +161,7 @@
             function showPage() {
             document.getElementById("loader").style.display = "none";
             document.getElementById("content").style.display = "block";
-            $("#body").removeClass('portail');
+            $("body").removeClass('portail');
             }
 
             function managelang(l){

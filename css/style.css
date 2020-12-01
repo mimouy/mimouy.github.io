@@ -1283,9 +1283,7 @@ body {
   justify-content: center;
   }
 
-.portail{
- background-color: #343a40;
-}
+
 
   
   .console {
@@ -1338,6 +1336,7 @@ body {
     outline: none;
     font-family: 'Fira Mono';
     font-size: 17px;
+
   }
 
 
@@ -1345,9 +1344,8 @@ body {
   position:absolute;
   height:90%;
   width:100%;
-  background:  linear-gradient(black, rgb(168, 168, 168), black);;
-}
-  
+  }
+
   
   
   
@@ -1549,7 +1547,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-
+.portail{
+  background-color: #343a40;
+  background:  linear-gradient(black, rgb(168, 168, 168), black);
+ 
+ }
 
   @media only screen and (max-width: 800px) { 
     .half{
