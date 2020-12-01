@@ -1345,7 +1345,7 @@ body {
   position:absolute;
   height:90%;
   width:100%;
-  background-color: rgb(77, 77, 77);
+  background:  linear-gradient(black, rgb(168, 168, 168), black);;
 }
   
   
