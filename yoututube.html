@@ -21,13 +21,6 @@
     </div>
 </div>
 
-                
-
-
-    
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
 
   <script>
   
@@ -47,8 +40,6 @@
     }
 
 
-
-
     function getId(url) {
     const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
     const match = url.match(regExp);
@@ -58,12 +49,16 @@
       : null;
     }
     
-const videoId = getId(document.getElementById('youtubelink').value);
-const iframeMarkup = '<iframe width="560" height="315" src="//www.youtube.com/embed/' 
-    + videoId + '" frameborder="0" allowfullscreen></iframe>';
 
-console.log('Video ID:', videoId)
 
+var input = document.getElementById("youtubelink");
+
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("loadbtn").click();
+  }
+});
   </script>
 
 </body>
