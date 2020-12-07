@@ -22,6 +22,7 @@ wavesurfer.on('finish', function () {
 });
 wavesurfer.on('ready', function () {
   document.getElementById("playpause").classList.remove("none");
+  document.getElementById("audioloader").classList.add("none");
 });
 
 
