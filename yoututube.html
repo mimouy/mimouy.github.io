@@ -4,6 +4,8 @@
   <title>Youtube No Ads</title>
 
   <link rel="stylesheet" href="css/allpage.css">
+  <meta name="google" content="notranslate">
+
 
 
 
@@ -13,11 +15,13 @@
 <body id="body">
 
   <div class="allpage">
-    <iframe id="video" class="fullW text-center video none" allowfullscreen style="height: 100%;" src="https://www.youtube.com/embed/5m3VZ9JgjnQ">
-    </iframe>
-    <div id="linkcontainer">
+      <div id="linkcontainer">
       <input type="text" placeholder="Youtube link" id="youtubelink">
       <button id="loadbtn" onclick="load()">GO</button>
+    </div>
+    <div class="youtubecontain" id="youtubecontain">
+    <iframe id="video" class="fullW text-center video none" allowfullscreen style="height: 100%;" src="https://www.youtube.com/embed/5m3VZ9JgjnQ">
+    </iframe>
     </div>
 </div>
 
@@ -59,6 +63,11 @@ input.addEventListener("keyup", function(event) {
     document.getElementById("loadbtn").click();
   }
 });
+
+ let lWidth = window.screen.width
+  if (lWidth<900) {
+    document.getElementById("youtubecontain").style = "height:400px"
+  }
   </script>
 
 </body>

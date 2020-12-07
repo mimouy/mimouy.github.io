@@ -21,23 +21,20 @@
     right: 0;
   }
 
-  .videocontainer{
-    width: 98% !important;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
   .video{
-      margin: auto;
+    margin: auto;
     width: 99% !important;
-    height: 80% !important;
+    height: 90% !important;
   }
+
+
   #linkcontainer{
       height: 50px;
       background-color: black;
       color: white;
       width: 80%;
       margin: auto;
+      margin-top: 20px;
       border: 1px solid grey;
       box-shadow:  0 0 8px grey;
       border-radius: 15px;
@@ -73,6 +70,25 @@
     cursor: pointer;
   }
 
+  .youtubecontain{
+      height: 100%;
+      margin: auto 0;
+      display: flex;
+  }
+
   .none{
       display: none;
   }
+
+  @media only screen and (max-width: 800px) {  /*Mobile version*/
+    .video{
+        max-height: 20% !important;
+        margin: 0 !important;
+      }
+      .allpage{
+        flex-direction: column-reverse;
+      }
+      .youtubecontain{
+        margin: 0;
+      }
+    }
