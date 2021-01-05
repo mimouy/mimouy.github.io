@@ -219,6 +219,7 @@ a {
 .site-navbar {
   margin-bottom: 0px;
   z-index: 9;
+  height: 60px;
   position: relative; }
   .site-navbar.transparent {
     background: transparent; }
@@ -358,6 +359,7 @@ a {
   width: 300px;
   position: fixed;
   right: 0;
+  top: 0;
   z-index: 2000;
   padding-top: 20px;
   background: #fff;
@@ -1284,7 +1286,9 @@ body {
   }
 
 
-
+  .BG{
+    height: 500px !important;
+  }
   
   .console {
 
@@ -1311,8 +1315,31 @@ body {
   line-height: 45px;
   text-align: center;
   color: #DDD;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  }
+  .console header p{
+    margin: auto;
+  }
+  #closeconsolebtn{
+    color: red;
+  }
+  #closeconsolebtn:hover{
+    color: black;
+  }
+
+  .consoleinput{
+    width: 100%;
+  }
+  .console header button:hover{
+    font-weight: normal;
   }
   
+  .cursor{
+    cursor: pointer !important;
+  }
+
   .console .consolebody {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -1483,11 +1510,13 @@ body {
     to {margin-left: 0;}
   }
 
-
+  .js-menu-toggle{
+    margin-top: -15px ;
+  }
 
   #iframeview{
     width: 100%;
-    height: 100%;
+    height: calc(100% - 60px) !important;
     margin: 0;
     padding: 0;
     overflow:hidden;
@@ -1499,8 +1528,8 @@ body {
     top:0px;
     left:0px;
     right:0px;
-    bottom:0px
-    
+    bottom:0px;
+    margin-top:60px;
     }
 
 #volume {
