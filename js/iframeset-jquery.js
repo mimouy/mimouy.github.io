@@ -12,6 +12,7 @@ $(function () {
 
         event.preventDefault();
         if ($(this).attr('Maction') == "switchlang") {
+          window.switchlangnavbar(event)
           window.frames[0].switchlang(event);
         } else {
           $("#iframeview").attr("src", url);

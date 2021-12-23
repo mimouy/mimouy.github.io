@@ -66,3 +66,15 @@ function switchlang(e){
     console.log("cookie set to fr => "+getCookie("lang"))
   }
 }
+
+
+function switchlangnavbar(e){
+  e.preventDefault();
+  let lang = getCookie("lang");
+  if (lang === "fr") {
+    setlang("eng");
+  }
+  if (lang === "eng") {
+    setlang("fr");
+  }
+}
